@@ -15,6 +15,9 @@ en cada request — una universidad nueva es una carpeta nueva en el bucket, sin
 - `GET  /api/v1/universities/{university_code}/agents/{agent_id}/health` — fuerza la carga de un agente y reporta su estado.
 - `POST /api/v1/universities/{university_code}/agents/{agent_id}/chat` — un turno de conversación.
 
+Documentación detallada para integrar desde el front (schemas, errores, ejemplos
+`curl`/`fetch`, tipos TypeScript): [docs/api-agents-endpoints.md](docs/api-agents-endpoints.md).
+
 La **generación de embeddings está desacoplada**: este runtime solo embebe la
 query de cada turno; los documentos los procesa el servicio de ingesta
 (repo `Westfield_agent_ingest_python`) que publica las bases vectoriales en S3.
